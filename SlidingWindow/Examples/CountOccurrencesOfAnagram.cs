@@ -7,9 +7,7 @@ class CountOccurrencesOfAnagram
         var w = word.Length;
         var count = 0;
         var ana = "";
-        var d = new Dictionary<string, int>
-        {
-        };
+        var d = new Dictionary<string, int>();
         foreach (var i in Enumerable.Range(0, w))
         {
             ana += text[i];
@@ -40,11 +38,11 @@ class CountOccurrencesOfAnagram
         var d = new int[26];
         foreach (var c in s)
         {
-            d[(char)c - (char)'a'] = 1;
+            d[c - 'a'] = 1;
         }
         foreach (var c in word)
         {
-            if (d[(char)c - (char)'a'] == 0)
+            if (d[c - 'a'] == 0)
             {
                 return false;
             }
